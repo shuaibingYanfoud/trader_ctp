@@ -1,0 +1,39 @@
+version: "3.2"
+
+services:
+  test1:
+    image: busybox
+    command: docker start trader
+    deploy:
+      mode: replicated
+      replicas: 0
+      labels:
+        - "swarm.cronjob.enable=true"
+        - "swarm.cronjob.schedule= 45 8,20 * * 1-5"
+        - "swarm.cronjob.skip-running=false"
+      restart_policy:
+        condition: none
+  test2:
+    image: busybox
+    command: docker stop trader_tcp
+    deploy:
+      mode: replicated
+      replicas: 0
+      labels:
+        - "swarm.cronjob.enable=true"
+        - "swarm.cronjob.schedule= 45 2 * * 1-5"
+        - "swarm.cronjob.skip-running=false"
+      restart_policy:
+        condition: none
+  test3:
+    image: busybox
+    command: docker stop trader_tcp
+    deploy:
+      mode: replicated
+      replicas: 0
+      labels:
+        - "swarm.cronjob.enable=true"
+        - "swarm.cronjob.schedule=15 15 * * 1-5"
+        - "swarm.cronjob.skip-running=false"
+      restart_policy:
+        condition: none

@@ -1,0 +1,4 @@
+swarm_cronjob.1.f7sybv1dmwxw@localhost.localdomain    | Mon, 23 Dec 2019 02:29:00 UTC INF Start job service=date_test1 status=paused tasks_active=0
+swarm_cronjob.1.f7sybv1dmwxw@localhost.localdomain    | Mon, 23 Dec 2019 02:29:00 UTC INF Start job service=date_test2 status=paused tasks_active=0
+swarm_cronjob.1.f7sybv1dmwxw@localhost.localdomain    | Mon, 23 Dec 2019 02:29:00 UTC ERR Cannot update error="Error response from daemon: update out of sequence" service=date_test2
+swarm_cronjob.1.f7sybv1dmwxw@localhost.localdomain    | Mon, 23 Dec 2019 02:45:00 UTC INF Start job service=date_test2 status= tasks_active=0
